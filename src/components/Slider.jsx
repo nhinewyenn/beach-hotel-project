@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 import '../App.css';
 import sliderData from '../slider-data';
+import { Fade } from 'react-awesome-reveal';
 
 const Slider = () => {
   const [curSlide, setCurSlide] = useState(0);
@@ -22,45 +23,48 @@ const Slider = () => {
   }
 
   function auto() {
-    slideInterval = setInterval(nextSlide, 5500);
+    slideInterval = setInterval(nextSlide, 10000);
   }
 
   useEffect(() => {
     setCurSlide(0);
   }, []);
 
-  // useEffect(() => {
-  //   if (autoScroll) auto();
-  //   return () => clearInterval(slideInterval);
-  // }, [curSlide]);
+  useEffect(() => {
+    if (autoScroll) auto();
+    return () => clearInterval(slideInterval);
+  }, [curSlide]);
 
   return (
-    <section className="slider">
-      <FaArrowAltCircleLeft className="arrow arrow-prev" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="arrow arrow-next" onClick={nextSlide} />
-      {sliderData.map((data, i) => (
-        <div className={i === curSlide ? 'slide current' : 'slide'} key={i}>
-          {i === curSlide && (
-            <>
-              <img src={data.img} alt="current slide" />
-              <div className="slider-content">
-                <h2>{data.heading}</h2>
-                <p>{data.desc}</p>
-                <hr />
-                <Link to="/rooms">
-                  <button
-                    className="btn-primary"
-                    onClick={event => console.log('click')}
-                  >
-                    Discover
-                  </button>
-                </Link>
-              </div>
-            </>
-          )}
-        </div>
-      ))}
-    </section>
+    <Fade>
+      <section className="slider">
+        <FaArrowAltCircleLeft
+          className="arrow arrow-prev"
+          onClick={prevSlide}
+        />
+        <FaArrowAltCircleRight
+          className="arrow arrow-next"
+          onClick={nextSlide}
+        />
+        {sliderData.map((data, i) => (
+          <div className={i === curSlide ? 'slide current' : 'slide'} key={i}>
+            {i === curSlide && (
+              <>
+                <img src={data.img} alt="current slide" />
+                <div className="slider-content">
+                  <h2>{data.heading}</h2>
+                  <p>{data.desc}</p>
+                  <hr />
+                  <Link to="/rooms">
+                    <button className="btn-primary">Discover</button>
+                  </Link>
+                </div>
+              </>
+            )}
+          </div>
+        ))}
+      </section>
+    </Fade>
   );
 };
 

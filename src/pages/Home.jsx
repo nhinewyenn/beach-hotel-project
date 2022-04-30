@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import About from '../components/About';
 import Banner from '../components/Banner';
 import FeaturedRoom from '../components/FeaturedRoom';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import Slider from '../components/Slider';
+import Footer from '../components/Footer';
+import MainFooter from '../components/MainFooter';
 
 const Home = () => {
   return (
@@ -19,9 +22,12 @@ const Home = () => {
           </Link>
         </Banner>
       </Hero>
+      <About />
       <Services />
       <FeaturedRoom />
       <Slider />
+      <Footer />
+      <MainFooter />
     </>
   );
 };

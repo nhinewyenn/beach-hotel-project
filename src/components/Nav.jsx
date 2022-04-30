@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../images/logo.jpg';
+import logo from '../images/Coast.jpg';
 import { FaAlignRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
