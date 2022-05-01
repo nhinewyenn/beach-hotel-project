@@ -75,31 +75,6 @@ const RoomsFilter = ({ rooms }) => {
           />
         </div>
 
-        {/* Room size */}
-        <div className="form-group">
-          <label htmlFor="size">
-            Room size <span className="lowercase">(ft²)</span>
-          </label>
-          <div className="size-inputs">
-            <input
-              type="number"
-              name="minSize"
-              id="size"
-              value={ctx.minSize}
-              onChange={ctx.handleChange}
-              className="size-input"
-            />
-            <input
-              type="number"
-              name="maxSize"
-              id="size"
-              value={ctx.maxSize}
-              onChange={ctx.handleChange}
-              className="size-input"
-            />
-          </div>
-        </div>
-
         {/* Extras */}
         <div className="form-group">
           <div className="single-extra">

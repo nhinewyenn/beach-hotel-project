@@ -1092,19 +1092,6 @@ a:active {
   border: none;
 }
 
-.size-inputs {
-  display: flex;
-}
-
-.size-input {
-  width: 40%;
-  padding: 7px;
-  border-radius: 10px;
-  border: 1px solid var(--primaryColor);
-  text-indent: 0.75rem;
-  margin-right: 0.5rem;
-}
-
 .single-extra label {
   display: inline-block;
   font-size: 0.8rem;

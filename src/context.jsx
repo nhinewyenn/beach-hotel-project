@@ -65,18 +65,8 @@ class RoomProvider extends Component {
   }
 
   filterRooms() {
-    let {
-      rooms,
-      type,
-      capacity,
-      minPrice,
-      maxPrice,
-      minSize,
-      maxSize,
-      price,
-      breakfast,
-      pets,
-    } = this.state;
+    let { rooms, type, capacity, minPrice, maxPrice, price, breakfast, pets } =
+      this.state;
 
     // All the rooms
     let currentRoom = [...rooms];
@@ -92,10 +82,6 @@ class RoomProvider extends Component {
       currentRoom = currentRoom.filter(room => room.capacity >= capacity);
     // filter price
     currentRoom = currentRoom.filter(room => room.price <= price);
-    // filter size
-    currentRoom = currentRoom.filter(
-      room => room.size >= minSize && room.size <= maxSize
-    );
     // filter extras
     if (breakfast)
       currentRoom = currentRoom.filter(room => room.breakfast === true);
