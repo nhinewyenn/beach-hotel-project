@@ -62,7 +62,7 @@ const RoomsFilter = ({ rooms }) => {
 
         {/* Room price */}
         <div className="form-group">
-          <label htmlFor="price">Room price ${ctx.price}</label>
+          <label htmlFor="price">Room price: ${ctx.price}</label>
           <input
             type="range"
             name="price"
@@ -77,7 +77,9 @@ const RoomsFilter = ({ rooms }) => {
 
         {/* Room size */}
         <div className="form-group">
-          <label htmlFor="size">Room size</label>
+          <label htmlFor="size">
+            Room size <span className="lowercase">(ft²)</span>
+          </label>
           <div className="size-inputs">
             <input
               type="number"
