@@ -213,7 +213,7 @@ a:active {
 .defaultHero,
 .roomsHero {
   min-height: calc(100vh - 66px);
-  background: url('./images/background.jpg') center/cover no-repeat;
+  background: url('./images/background.webp') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1369,7 +1369,7 @@ label:hover:before {
   width: 100%;
   padding: 0 2rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.519)),
-    url(./images/Tufted-furniture-seating-for-luxury-furniture.jpg);
+    url(./images/footer.webp);
 }
 
 .footer-links {
