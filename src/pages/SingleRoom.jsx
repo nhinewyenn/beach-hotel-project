@@ -3,7 +3,7 @@ import MainFooter from '../components/MainFooter';
 import { Link } from 'react-router-dom';
 import { RoomContext } from '../context';
 import { Slide, Fade } from 'react-awesome-reveal';
-import defaultBcg from '../images/room-4.jpg';
+import defaultBcg from '../images/room-4.webp';
 import Banner from '../components/Banner';
 import Title from '../components/Title';
 import StyledHero from '../components/StyledHero';

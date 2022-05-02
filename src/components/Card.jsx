@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import img from '../images/room-6.jpeg';
+import img from '../images/room-6.webp';
 import Title from './Title';
 
 const Card = () => {
