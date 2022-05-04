@@ -24,6 +24,6 @@ Package used for this project includes:
 
 ## Screenshots
 
-![App Screenshot](/src/images/screen-shot1.png)
-![App Screenshot](/src/images/screen-shot2.png)
-![App Screenshot](/src/images/screen-shot3.png)
+![App Screenshot](/src/images/screen-shot1.webp)
+![App Screenshot](/src/images/screen-shot2.webp)
+![App Screenshot](/src/images/screen-shot3.webp)
